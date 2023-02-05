@@ -27,7 +27,7 @@
 - React Native Setup
   I choose the setup for React Native CLI Quickstart for Windows and Android
   - setup: [https://reactnative.dev/docs/environment-setup]
-  - don't forget in android to launch a virtual Cellular before the command `nvm start android`
+  - don't forget in Android Studio to launch a virtual Cellular before the command `nvm start android`
 
 ## Launch the application
 
