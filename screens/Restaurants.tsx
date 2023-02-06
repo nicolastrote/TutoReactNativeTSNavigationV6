@@ -5,7 +5,7 @@ import { RootStackParams } from '../App';
 import Menu from '../components/Menu';
 import RestaurantCard from '../components/RestaurantCard';
 
-type Props = NativeStackScreenProps<RootStackParams, 'Restaurants'>;
+type Props = NativeStackScreenProps<RootStackParams, 'RestaurantsStack'>;
 
 const RestaurantsScreen: React.FC<Props> = ({ navigation }) => {
   const handleOnPress = (name: string) => {

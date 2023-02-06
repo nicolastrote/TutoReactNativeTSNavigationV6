@@ -67,3 +67,4 @@ buck-out/
 # IDE
 .idea
 .vscode
+.expo

@@ -18,19 +18,35 @@
 
 ## Prior
 
-- Tools
-  Here is the tools I will use during this tutorial:
+### Software
 
-  - VSCode: [https://code.visualstudio.com/]
-  - chocolatey: [https://chocolatey.org/]
+Here is the softwares I will use during this tutorial:
 
-- React Native Setup
-  I choose the setup for React Native CLI Quickstart for Windows and Android
-  - setup: [https://reactnative.dev/docs/environment-setup]
-  - don't forget in Android Studio to launch a virtual Cellular before the command `nvm start android`
+- VSCode: [https://code.visualstudio.com/]
+- chocolatey: [https://chocolatey.org/]
+
+### React Native Setup with Android on Windows
+
+- setup: [https://reactnative.dev/docs/environment-setup]
+- don't forget in Android Studio to launch a virtual Cellular before the command `nvm start android`
+
+### React Native Setup for Expo with IOS on Mac
+
+- setup: [https://reactnative.dev/docs/environment-setup]
+
+  - install XCode withApp Store
+  - `brew install watchman`
+  - `npm install -g expo react-native`
+  - `npm install expo`
+  - lancement: `npx expo start`
+
+- debugger:
+  - `npm install -g react-devtools`
+  - how-to: https://www.npmjs.com/package/react-devtools
 
 ## Launch the application
 
 - `cd ~ && mkdir Workspace && cd ~/Workspace`
 - `git clone [[the repo]](https://github.com/nicolastrote/tuto-react-native-ts-navigation-v6) && cd TutoReactNativeTSNavigationV6`
-- `npm run android`
+- `npm install`
+- `npm run android` or `npm run ios`

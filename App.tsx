@@ -1,5 +1,5 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { NavigationContainer, ParamListBase } from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
 import ExploreScreen from './screens/Explore';
@@ -8,7 +8,7 @@ import RestaurantScreen from './screens/Restaurant';
 import RestaurantsScreen from './screens/Restaurants';
 
 export type RootStackParams = {
-  Explore: any;
+  ExploreStack: ExploreStackParams;
   RestaurantsStack: RestaurantsStackParams;
   Profile: any;
   Restaurant: {
@@ -39,11 +39,29 @@ const RestaurantsScreenStack = () => {
   );
 };
 
+export type ExploreStackParams = {
+  Explore: any;
+  Restaurant: {
+    name: string;
+  };
+};
+
+const ExploreStack = createNativeStackNavigator<ExploreStackParams>();
+
+const ExploreScreenStack = () => {
+  return (
+    <ExploreStack.Navigator initialRouteName="Explore">
+      <ExploreStack.Screen name="Explore" component={ExploreScreen} />
+      <ExploreStack.Screen name="Restaurant" component={RestaurantsScreen} />
+    </ExploreStack.Navigator>
+  );
+};
+
 export const App = () => {
   return (
     <NavigationContainer>
       <RootStack.Navigator initialRouteName="Explore">
-        <RootStack.Screen name="Explore" component={ExploreScreen} />
+        <RootStack.Screen name="ExploreStack" component={ExploreScreenStack} />
         <RootStack.Screen
           name="RestaurantsStack"
           component={RestaurantsScreenStack}
