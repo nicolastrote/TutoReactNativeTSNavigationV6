@@ -8,6 +8,9 @@
   - [Table of contents](#table-of-contents)
   - [Sources](#sources)
   - [Prior](#prior)
+    - [Software](#software)
+    - [React Native Setup with Android on Windows](#react-native-setup-with-android-on-windows)
+    - [React Native Setup for Expo with IOS on Mac](#react-native-setup-for-expo-with-ios-on-mac)
   - [Launch the application](#launch-the-application)
 
 ## Sources
@@ -28,6 +31,7 @@ Here is the softwares I will use during this tutorial:
 ### React Native Setup with Android on Windows
 
 - setup: [https://reactnative.dev/docs/environment-setup]
+  - nvm install and use node 14
 - don't forget in Android Studio to launch a virtual Cellular before the command `nvm start android`
 
 ### React Native Setup for Expo with IOS on Mac
